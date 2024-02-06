@@ -1,0 +1,10 @@
+[Unit]
+Description=Rosetta mount
+
+[Service]
+Type=oneshot
+ExecStart=mount -t virtiofs -o context=system_u:object_r:container_runtime_exec_t:s0 rosetta /mnt
+ExecStartPost=/bin/systemctl restart systemd-binfmt.service
+
+[Install]
+WantedBy=multi-user.target

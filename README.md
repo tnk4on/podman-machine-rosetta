@@ -1,6 +1,8 @@
 # How to manually enable Rosetta on a Podman machine
 
 This is a temporary solution until the feature is implemented in Podman v5.
+> [!WARNING]
+> This solution only work Podman machine v4.
 
 ## Step
 

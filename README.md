@@ -18,7 +18,7 @@ Add the following code in `"devices": []`
     {
      "kind": "rosetta",
      "MountTag": "rosetta",
-     "InstallRosetta": false
+     "InstallRosetta": true
     }
 ```
 3. `podman machine start`

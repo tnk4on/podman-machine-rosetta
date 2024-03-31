@@ -3,8 +3,9 @@ Description=Rosetta mount
 
 [Service]
 Type=oneshot
-ExecStart=mount -t virtiofs -o context=system_u:object_r:container_runtime_exec_t:s0 rosetta /mnt
-ExecStartPost=/bin/systemctl restart systemd-binfmt.service
+ExecStartPre=mount -t virtiofs -o context=system_u:object_r:container_runtime_exec_t:s0 rosetta /mnt
+ExecStart=/bin/systemctl restart systemd-binfmt.service
+ExecStartPost=echo -1 > /proc/sys/fs/binfmt_misc/qemu-x86_64
 
 [Install]
 WantedBy=multi-user.target

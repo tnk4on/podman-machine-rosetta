@@ -1,3 +1,5 @@
+Rosetta is now supported in [Podman v5.1.0](https://github.com/containers/podman/releases/tag/v5.1.0). There will be no further updates to this repository.
+
 # How to manually enable Rosetta on a Podman machine
 
 This is a temporary solution until the feature is implemented in Podman v5.
